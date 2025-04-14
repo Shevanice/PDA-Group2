@@ -1,0 +1,52 @@
+# Word Scramble Game
+
+import random
+import time
+
+class WordScrambleGame:
+    def __init__(self):
+        self.words = ['python', 'programming', 'development', 'scramble', 'challenge', 'computer', 'science', 'algorithm', 'function', 'variable']
+        self.total_words_solved = 0
+        self.fastest_time = float('inf')
+        self.scores = []
+
+    def scramble_word(self, word):
+        word = list(word)
+        random.shuffle(word)
+        return ''.join(word)
+
+    def play_game(self):
+        while True:
+            word = random.choice(self.words)
+            scrambled = self.scramble_word(word)
+            print(f"Guess the word: {scrambled}")
+            start_time = time.time()
+            guess = input("Your guess: ")
+            end_time = time.time()
+
+            if guess.lower() == word:
+                elapsed_time = end_time - start_time
+                self.total_words_solved += 1
+                self.scores.append(elapsed_time)
+                if elapsed_time < self.fastest_time:
+                    self.fastest_time = elapsed_time
+                print(f"Correct! Time taken: {elapsed_time:.2f} seconds")
+            else:
+                print(f"Wrong! The correct word was: {word}")
+
+            if input("Do you want to play again? (y/n): ").lower() != 'y':
+                break
+
+    def display_stats(self):
+        if self.scores:
+            average_score = sum(self.scores) / len(self.scores)
+            print(f"Total words solved: {self.total_words_solved}")
+            print(f"Fastest solve time: {self.fastest_time:.2f} seconds")
+            print(f"Average solve time: {average_score:.2f} seconds")
+        else:
+            print("No games played.")
+
+if __name__ == "__main__":
+    game = WordScrambleGame()
+    game.play_game()
+    game.display_stats() 
