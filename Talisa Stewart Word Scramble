@@ -1,4 +1,14 @@
+"""
+Auther: Talisa Stewart
+ID: 2407311
+Date: April 16, 2025
+Reference:https://www.geeksforgeeks.org/number-guessing-game-in-python/
 
+Description: The Number Guessing Game is a fun and interactive game that challenges players to guess a randomly selected number between 1 and 100. With each guess, the game provides helpful hints telling the player whether to guess higher or lower — until the correct number is found.
+This game demonstrates several key programming concepts: Random Number Generation to create unpredictability in each game. Classes and Objects for a structured and reusable code design.
+Exception Handling to gracefully manage invalid input. Descriptive Analytics such as: Total number of guesses per game, Average guesses across multiple rounds, And the best (lowest) number of guesses.
+The player's scores are stored and displayed after each game session, encouraging improvement and replayability. This game runs continuously until the player chooses to exit, providing a smooth and user-friendly experience.
+"""
 #Number Guessing Game
 import random
 
