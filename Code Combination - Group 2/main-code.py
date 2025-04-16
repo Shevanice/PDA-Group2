@@ -18,7 +18,7 @@ def main_menu():
         print(PURPLE +"--------------------------------"+ RESET)
         print("Enter [M] To Play Maze Game")
         print("Enter [S] To Play Slot Machine")
-        print("Enter [W] To Play Word Scramble")
+        print("Enter [W] To Play Guess the number")
         print(RED +"Enter [E] To Exit"+ RESET)
 
         choice = input("\nSelect an option: ").strip().upper()
