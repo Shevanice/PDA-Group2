@@ -1,23 +1,23 @@
 #Main Menu
 
-
 RESET = "\033[0m"
+PURPLE = "\033[95m"
 GRAY = "\033[90m"
 WHITE = "\033[97m"
 GREEN = "\033[92m"
 RED = "\033[91m"
-PURPLE = "\033[95m"
 
 def main_menu():
     while True:
         print("\nWelcome to Group 2's presentation. This is the main menu section, "
               "which will be used to launch and play each game.")
               
-        print(PURPLE +"--------------------------------"+ RESET)
-        print("\n--------- Main Menu ----------")
-        print(PURPLE +"--------------------------------"+ RESET)
-        print("Enter [M] To Play Maze Game")
-        print("Enter [S] To Play Slot Machine")
+        print(PURPLE +"-----------------------------------------------"+ RESET)
+        print(PURPLE +"--------- Main Menu ----------")
+        print("-----------------------------------------------"+ RESET)
+  
+        print( "Enter [M] To Play Maze Game"+ RESET)
+        print("Enter [S] To Play Slot Machine"+ RESET)
         print("Enter [W] To Play Guess the number")
         print(RED +"Enter [E] To Exit"+ RESET)
 
@@ -32,8 +32,8 @@ def main_menu():
                 game = slot_machine.slotMachine()
                 while True:
                     print(PURPLE +"--------------------------------"+ RESET)
-                    print("==== Slot Machine Menu ====")
-                    print(PURPLE +"--------------------------------\n"+ RESET)
+                    print(PURPLE +"==== Slot Machine Menu ===="+ RESET)
+                    print(PURPLE +"--------------------------------"+ RESET)
                     print("Enter [P] to Play a Round")
                     print("Enter [D] to Deposit Money")
                     print("Enter [S] to Show Stats")
@@ -64,3 +64,4 @@ def main_menu():
 
 if __name__ == "__main__":
     main_menu()
+
