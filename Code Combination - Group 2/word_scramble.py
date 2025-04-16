@@ -8,6 +8,9 @@ Description:
 """
 import random
 
+RESET = "\033[0m"
+PURPLE = "\033[95m"
+
 class NumberGuessingGame:
     def __init__(self):
         self.scores = []
@@ -17,7 +20,9 @@ class NumberGuessingGame:
         while True:
             number_to_guess = random.randint(1, 100)
             guesses = 0
+            print(PURPLE +"--------------------------------"+ RESET)
             print("Welcome to the Number Guessing Game!")
+            print(PURPLE +"--------------------------------\n"+ RESET)
             print("I have picked a number between 1 and 100. Try to guess it!")
 
             while True:
